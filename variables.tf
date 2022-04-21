@@ -17,7 +17,16 @@
 variable "region" {
   type        = string
   description = "The region your VKE cluster will be deployed in. Currently, supported values are ewr and lax"
-  default     = "lax"
+}
+
+variable "cluster_name" {
+  type        = string
+  description = "The cluster name"
+}
+
+variable "kubernetes_version" {
+  type        = string
+  description = "Kubernetes version"
 }
 
 variable "node_quantity" {
@@ -32,13 +41,18 @@ variable "node_plan" {
   default     = "vc2-1c-2gb"
 }
 
+variable "node_label" {
+  type        = string
+  description = "The node label"
+}
+
 variable "node_pools" {
   description = "Addons node pools"
   type = list(object({
-    node_count = number
-    plan       = string
-    label      = string
-    tag        = string
+    quantity = number
+    plan     = string
+    label    = string
+    tag      = string
   }))
   default = []
 }

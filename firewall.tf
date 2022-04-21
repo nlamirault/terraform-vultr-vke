@@ -12,13 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-terraform {
-  required_version = ">= 1.0.0"
-
-  required_providers {
-    vultr = {
-      source  = "vultr/vultr"
-      version = ">= 2.8"
-    }
-  }
+resource "vultr_firewall_group" "this" {
+  description = var.cluster_name
 }

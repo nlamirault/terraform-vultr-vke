@@ -16,7 +16,7 @@ resource "vultr_kubernetes_node_pools" "this" {
   count = length(var.node_pools)
 
   cluster_id    = vultr_kubernetes.this.id
-  node_quantity = var.node_pools[count.index].node_count
+  node_quantity = var.node_pools[count.index].quantity
   plan          = var.node_pools[count.index].plan
   label         = var.node_pools[count.index].label
   tag           = var.node_pools[count.index].tag

@@ -13,8 +13,8 @@
 # limitations under the License.
 
 resource "vultr_kubernetes" "this" {
+  label   = var.cluster_name
   region  = var.region
-  label   = var.label
   version = var.kubernetes_version
 
   node_pools {
