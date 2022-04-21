@@ -42,5 +42,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_vke_id"></a> [vke\_id](#output\_vke\_id) | The VKE cluster ID |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
